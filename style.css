@@ -1,62 +1,113 @@
+/* General Styles */
 body {
-    font-family: 'Arial, sans-serif';
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    background-color: #ffcccc;
     text-align: center;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
+
 .container {
-    margin-top: 50px;
-}
-h1 {
-    color: #fff;
-    font-size: 3rem;
-}
-p {
-    color: #fff;
-    font-size: 1.5rem;
-}
-.main-image {
-    width: 50%;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-nav {
-    margin-top: 20px;
-}
-nav a {
-    text-decoration: none;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
     background: white;
-    color: #ff477e;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Fade-in Effect */
 .fade-in {
-    animation: fadeIn 2s;
+    animation: fadeIn 2s ease-in-out;
 }
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-/* Heart Animation */
+
+/* Main Image */
+.main-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Navigation Links */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d60000;
+    font-size: 18px;
+    margin: 0 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff6666;
+    color: white;
+}
+
+/* Extra Links */
+.extra-links {
+    margin-top: 20px;
+}
+
+.extra-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.extra-links a:hover {
+    color: #d60000;
+}
+
+/* Floating Hearts */
 .hearts {
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    pointer-events: none;
     overflow: hidden;
+    top: 0;
+    left: 0;
 }
+
+@keyframes floatHearts {
+    0% { transform: translateY(100vh) scale(0.3); opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
 .heart {
     position: absolute;
+    bottom: -10vh;
     color: red;
-    font-size: 24px;
-    animation: floatUp 5s infinite linear;
+    font-size: 20px;
+    animation: floatHearts 5s linear infinite;
 }
-@keyframes floatUp {
-    0% { transform: translateY(100vh); opacity: 1; }
-    100% { transform: translateY(-10vh); opacity: 0; }
+
+/* Music Button */
+#toggle-music {
+    background-color: #d60000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#toggle-music:hover {
+    background-color: #ff6666;
 }
