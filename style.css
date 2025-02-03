@@ -1,19 +1,11 @@
-/* Love-Themed Background */
+/* Loved Theme Background */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #ffccdd, #ff99cc); /* Pink gradient */
+    background-color: #ffccdd; /* Soft pink */
     text-align: center;
     margin: 0;
     padding: 0;
     color: #d60000; /* Deep red text */
-    background-image: url('hearts-pattern.png'); /* Optional: Add a heart pattern image */
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-/* Container for the main content */
-.container {
-    padding: 20px;
 }
 
 /* Spider-Man Pop-Up */
@@ -34,65 +26,20 @@ body {
     top: 20px !important;
 }
 
-/* Smaller Image */
+/* Small Image */
 .main-image {
-    width: 30%; /* Make the image smaller */
-    max-width: 150px; /* Limit the maximum size */
+    width: 30%;
+    max-width: 150px; /* Smaller image */
     border-radius: 15px;
     margin-top: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Links */
-nav a {
-    color: #d60000;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #ffe6f2;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #ff99cc;
-}
-
-/* Floating Hearts Animation */
+/* Floating Hearts */
 .hearts {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: floatHearts 4s ease-in-out infinite;
-}
-
-@keyframes floatHearts {
-    0% {
-        transform: translateX(-50%) translateY(0);
-    }
-    50% {
-        transform: translateX(-50%) translateY(-20px);
-    }
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
-/* Play/Pause Button */
-#toggle-music {
-    background-color: #d60000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#toggle-music:hover {
-    background-color: #ff4d4d;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url('hearts.gif'); /* Add floating hearts effect */
+    opacity: 0.4;
 }
