@@ -1,11 +1,14 @@
-/* Solid Pink Background */
+/* Love-Themed Background */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffccdd; /* Pink */
+    background: linear-gradient(to bottom, #ffccdd, #ff99cc); /* Pink gradient */
     text-align: center;
     margin: 0;
     padding: 0;
     color: #d60000; /* Deep red text */
+    background-image: url('hearts-pattern.png'); /* Optional: Add a heart pattern image */
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Container for the main content */
@@ -31,10 +34,10 @@ body {
     top: 20px !important;
 }
 
-/* Small Image */
+/* Smaller Image */
 .main-image {
-    width: 40%;
-    max-width: 200px;
+    width: 30%; /* Make the image smaller */
+    max-width: 150px; /* Limit the maximum size */
     border-radius: 15px;
     margin-top: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -52,44 +55,4 @@ nav a {
     transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    background-color: #ff99cc;
-}
-
-/* Floating Hearts Animation */
-.hearts {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: floatHearts 4s ease-in-out infinite;
-}
-
-@keyframes floatHearts {
-    0% {
-        transform: translateX(-50%) translateY(0);
-    }
-    50% {
-        transform: translateX(-50%) translateY(-20px);
-    }
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
-/* Play/Pause Button */
-#toggle-music {
-    background-color: #d60000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#toggle-music:hover {
-    background-color: #ff4d4d;
-}
+nav
