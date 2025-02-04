@@ -17,16 +17,21 @@ document.getElementById("login-form").addEventListener("submit", function(event)
         // Hide login form
         document.getElementById("login-container").style.display = "none";
 
-        // Show content and the Spider-Man image
+        // Show content
         document.getElementById("content-container").style.display = "block";
-        document.getElementById("spiderman-container").style.display = "block";
-
-        // Spider-Man Effect
-        document.getElementById("spiderman-container").classList.add("show-spiderman");
         
+        // Show Spider-Man logo at the top
+        const spidermanContainer = document.getElementById("spiderman-container");
+        spidermanContainer.style.display = "block";  // Show the Spider-Man image
+
+        // Position the Spider-Man at the top and animate it
+        spidermanContainer.classList.add("show-spiderman");
+
+        // Hide the Spider-Man logo after 3 seconds
         setTimeout(() => {
-            document.getElementById("spiderman-container").style.display = "none";
+            spidermanContainer.style.display = "none";  // Hide after 3 seconds
         }, 3000);
+        
     } else {
         alert("Incorrect Username or Password");
     }
