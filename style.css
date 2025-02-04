@@ -8,6 +8,11 @@ body {
     color: #d60000; /* Deep red text */
 }
 
+/* Container for the content */
+.container {
+    margin-top: 50px; /* Add space so the title isn't hidden behind the button */
+}
+
 /* Spider-Man Pop-Up */
 #spiderman-container {
     position: fixed;
