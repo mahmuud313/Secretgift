@@ -8,6 +8,18 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Login Form -->
+    <div id="login-container">
+        <h2>Login to View the Letter</h2>
+        <form id="login-form">
+            <label for="username">Username: </label>
+            <input type="text" id="username" required><br><br>
+            <label for="password">Password: </label>
+            <input type="password" id="password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
     <!-- Background Music -->
     <audio id="bg-music" autoplay loop>
         <source src="song.mp3" type="audio/mpeg">
@@ -23,9 +35,9 @@
         <img src="spiderman.png" alt="Spider-Man" id="spiderman">
     </div>
 
-    <div class="container fade-in">
+    <!-- Content (Initially Hidden) -->
+    <div id="letter-container" class="hidden">
         <h1>Happy Valentine's Day Habeebte❤️🫂</h1>
-
         <p>
             **My Saddonti, my love, my everything,**<br><br>
             Happy Valentine’s Day, my beautiful girl Saddonti. I don’t even know where to start because no words can truly capture how much you mean to me. From the moment you walked into my life, everything became brighter, warmer, and so much more beautiful. You are the best thing that has ever happened to me, and every single day, I thank the universe for bringing you into my world.<br><br>
@@ -42,10 +54,7 @@
             ***أحِبُّكِ هذا مني بيان ولَنْ أُخفيهِ بل إعلان أُحِبُّك يا حبيب الله وأهوى هاتِهِ العينان❤️ الله يخليلي اياكي بحياتي يا حبيبتي بحِبِّك كتييييير ❤️❤️***
         </p>
 
-        <!-- Smaller Image -->
         <img src="image.png" alt="A lovely image for Saddonti" class="main-image">
-
-        <!-- Navigation -->
         <nav>
             <a href="OurStory.html">Our Story</a>
             <a href="gallery.html">Photo Gallery</a>
@@ -53,7 +62,6 @@
         </nav>
     </div>
 
-    <!-- Floating Hearts Animation -->
     <div class="hearts"></div>
 </body>
 </html>
