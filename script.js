@@ -21,6 +21,12 @@ function login() {
     }
 }
 
+// Listen for the login button click event
+document.getElementById("login-button").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+    login();
+});
+
 // Spider-Man Effect - Appears Instantly
 window.onload = function() {
     document.getElementById("spiderman-container").classList.add("show-spiderman");
