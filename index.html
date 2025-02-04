@@ -8,37 +8,17 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Background Music (Don't autoplay) -->
-    <audio id="bg-music">
+    <!-- Background Music -->
+    <audio id="bg-music" preload="auto" loop>
         <source src="song.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Music Player Button -->
+    <!-- Play/Pause Button -->
     <div class="music-container">
-        <button id="toggle-music">Music Player</button> <!-- Music Player button -->
+        <button id="toggle-music">Music player</button>
     </div>
 
-    <!-- Login Section -->
-    <div id="login-container">
-        <h2>Login</h2>
-        <form id="login-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
-
-            <button type="submit">Login</button>
-        </form>
-    </div>
-
-    <!-- Spider-Man Pop-Up (Initially hidden) -->
-    <div id="spiderman-container" style="display: none;">
-        <img src="spiderman.png" alt="Spider-Man" id="spiderman">
-    </div>
-
-    <!-- Content Section (Hidden until login) -->
-    <div id="content-container" style="display: none;">
+    <div class="container fade-in">
         <h1>Happy Valentine's Day Habeebte❤️🫂</h1>
 
         <p>
