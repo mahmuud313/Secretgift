@@ -13,24 +13,6 @@ body {
     padding-top: 70px; /* Give space at the top so content is not hidden behind the button */
 }
 
-/* Spider-Man Pop-Up */
-#spiderman-container {
-    position: fixed;
-    top: -200px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: 0.5s ease-in-out;
-}
-
-#spiderman {
-    width: 150px;
-}
-
-/* Animation */
-.show-spiderman {
-    top: 20px !important;
-}
-
 /* Larger Image */
 .main-image {
     width: 50%;  /* Increased size */
@@ -59,27 +41,4 @@ body {
 }
 
 #toggle-music:hover {
-    background-color: #d60000;
-}
-
-/* Login Form Styling */
-#login-container {
-    text-align: center;
-    margin-top: 100px;
-}
-
-input {
-    padding: 10px;
-    font-size: 16px;
-    margin: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ff4d6d;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
+    background-color: #
