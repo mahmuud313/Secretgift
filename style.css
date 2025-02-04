@@ -13,6 +13,14 @@ body {
     padding-top: 70px; /* Give space at the top so content is not hidden behind the button */
 }
 
+/* Larger Image */
+.main-image {
+    width: 50%;  /* Increased size */
+    max-width: 250px; /* Set a max width to prevent stretching */
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
 /* Play/Pause Button at Top */
 .music-container {
     position: fixed;
@@ -36,58 +44,32 @@ body {
     background-color: #d60000;
 }
 
-/* Main Image */
-.main-image {
-    width: 50%;  /* Increased size */
-    max-width: 250px; /* Set a max width to prevent stretching */
-    border-radius: 15px;
-    margin-top: 15px;
-}
-
-/* Navigation Links */
-nav {
-    margin-top: 20px;
-}
-
+/* Navigation */
 nav a {
-    margin: 0 15px;
+    color: #d60000;
     text-decoration: none;
-    color: #d60000; /* Deep red */
-    font-weight: bold;
+    font-size: 18px;
+    margin: 0 15px;
 }
 
 nav a:hover {
-    color: #ff4d6d; /* Light pink on hover */
+    text-decoration: underline;
 }
 
 /* Floating Hearts Animation */
 .hearts {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    animation: float-hearts 5s infinite;
+    font-size: 30px;
+    color: #ff4d6d;
+    animation: hearts 5s infinite;
 }
 
-@keyframes float-hearts {
-    0% {
-        transform: translateX(-50%) translateY(0);
-    }
-    50% {
-        transform: translateX(-50%) translateY(-30px);
-    }
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeIn 3s ease-out;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+/* Hearts Animation */
+@keyframes hearts {
+    0% { opacity: 0; top: 30%; left: 50%; transform: translateX(-50%); }
+    50% { opacity: 1; top: 40%; left: 45%; }
+    100% { opacity: 0; top: 50%; left: 60%; }
 }
