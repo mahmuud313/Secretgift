@@ -1,3 +1,26 @@
+// Usernames and passwords
+const users = {
+    "Saddonti": "ana bento la mahmoudi",
+    "mahmoudi": "001002003004",
+    "Friend": "102030405060708090"
+};
+
+// Function to handle login
+function login() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Check if the username and password match
+    if (users[username] && users[username] === password) {
+        // Hide login form and show the content
+        document.getElementById("login-form").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    } else {
+        // Show error message
+        document.getElementById("error-message").style.display = "block";
+    }
+}
+
 // Spider-Man Effect - Appears Instantly
 window.onload = function() {
     document.getElementById("spiderman-container").classList.add("show-spiderman");
