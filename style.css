@@ -13,16 +13,6 @@ body {
     padding-top: 70px; /* Give space at the top so content is not hidden behind the button */
 }
 
-/* Hide content initially */
-#content-container {
-    display: none;
-}
-
-/* Login Form Container */
-#login-container {
-    display: block;
-}
-
 /* Spider-Man Pop-Up */
 #spiderman-container {
     position: fixed;
@@ -35,7 +25,7 @@ body {
 }
 
 #spiderman {
-    width: 150px;
+    width: 100px; /* Adjusted smaller size */
 }
 
 /* Animation for Spider-Man logo when it's visible */
@@ -80,49 +70,44 @@ nav {
 }
 
 nav a {
-    color: #d60000;
+    margin: 0 15px;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    display: inline-block;
+    color: #d60000; /* Deep red */
+    font-weight: bold;
 }
 
 nav a:hover {
-    background-color: #ff4d6d;
-    color: white;
+    color: #ff4d6d; /* Light pink on hover */
 }
 
-/* Fade-In Effect for Content */
-.fade-in {
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Hearts Animation */
+/* Floating Hearts Animation */
 .hearts {
     position: absolute;
-    bottom: 20px;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    animation: floatHearts 5s ease-in-out infinite;
+    width: 100%;
+    height: 100%;
+    animation: float-hearts 5s infinite;
 }
 
-@keyframes floatHearts {
+@keyframes float-hearts {
     0% {
         transform: translateX(-50%) translateY(0);
     }
     50% {
-        transform: translateX(-50%) translateY(-50px);
+        transform: translateX(-50%) translateY(-30px);
     }
     100% {
         transform: translateX(-50%) translateY(0);
     }
+}
+
+.fade-in {
+    animation: fadeIn 3s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
