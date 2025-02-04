@@ -1,25 +1,24 @@
-// User credentials
-const users = [
-    { username: 'Saddonti', password: 'ana bento la mahmoudi' },
-    { username: 'mahmoudi', password: '001002003004' },
-    { username: 'Friend', password: '102030405060708090' }
-];
+// Users and Passwords
+const users = {
+    Saddonti: "ana bento la mahmoudi",
+    mahmoudi: "001002003004",
+    Friend: "102030405060708090"
+};
 
-// Handle login
+// Handle Login
 document.getElementById("login-form").addEventListener("submit", function(event) {
     event.preventDefault();
 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    const user = users.find(user => user.username === username && user.password === password);
-
-    if (user) {
-        // Hide login form and show content
+    // Check if username and password match
+    if (users[username] && users[username] === password) {
+        // Hide login and show content
         document.getElementById("login-container").style.display = "none";
-        document.getElementById("letter-container").classList.remove("hidden");
+        document.getElementById("content-container").style.display = "block";
     } else {
-        alert("Invalid username or password.");
+        alert("Incorrect username or password. Please try again.");
     }
 });
 
@@ -28,17 +27,9 @@ document.getElementById("toggle-music").addEventListener("click", function() {
     const music = document.getElementById("bg-music");
     if (music.paused) {
         music.play();
-        this.textContent = "Pause Music";
+        this.textContent = "Pause Music"; // Text changes to 'Pause Music' when playing
     } else {
         music.pause();
-        this.textContent = "Play Music";
+        this.textContent = "Music Player"; // Text changes back to 'Music Player' when paused
     }
 });
-
-// Spider-Man Effect
-window.onload = function() {
-    document.getElementById("spiderman-container").classList.add("show-spiderman");
-    setTimeout(() => {
-        document.getElementById("spiderman-container").style.display = "none";
-    }, 3000);
-};
