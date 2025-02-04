@@ -9,32 +9,31 @@
 </head>
 <body>
     <!-- Background Music -->
-    <audio id="bg-music" autoplay loop>
+    <audio id="bg-music" loop>
         <source src="song.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Play/Pause Button -->
     <div class="music-container">
-        <button id="toggle-music">Pause Music</button>
+        <button id="toggle-music">Music Player</button>
     </div>
 
-    <!-- Spider-Man Pop-Up -->
-    <div id="spiderman-container">
-        <img src="spiderman.png" alt="Spider-Man" id="spiderman">
-    </div>
-
-    <!-- Login Form -->
+    <!-- Login Section -->
     <div id="login-container">
-        <h2>Please Login</h2>
+        <h2>Login</h2>
         <form id="login-form">
-            <input type="text" id="username" placeholder="Username" required><br>
-            <input type="password" id="password" placeholder="Password" required><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
             <button type="submit">Login</button>
         </form>
     </div>
 
-    <!-- Letter Content (Hidden Initially) -->
-    <div id="letter-container" class="hidden">
+    <!-- Content Section (Hidden until login) -->
+    <div id="content-container" style="display: none;">
         <h1>Happy Valentine's Day Habeebte❤️🫂</h1>
 
         <p>
