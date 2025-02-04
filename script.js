@@ -25,6 +25,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 // Play/Pause Music Button
 document.getElementById("toggle-music").addEventListener("click", function() {
     const music = document.getElementById("bg-music");
+
     if (music.paused) {
         music.play();
         this.textContent = "Pause Music"; // Text changes to 'Pause Music' when playing
