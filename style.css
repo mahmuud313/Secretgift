@@ -1,4 +1,4 @@
-/* General Styles */
+/* Love-Themed Background */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #ffccdd; /* Pink */
@@ -8,17 +8,38 @@ body {
     color: #d60000; /* Deep red text */
 }
 
-/* Hide content initially */
-.hidden {
-    display: none;
-}
-
-/* Container for content */
+/* Container for the content */
 .container {
     padding-top: 70px; /* Give space at the top so content is not hidden behind the button */
 }
 
-/* Music Button Styling */
+/* Spider-Man Pop-Up */
+#spiderman-container {
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s ease-in-out;
+}
+
+#spiderman {
+    width: 150px;
+}
+
+/* Animation */
+.show-spiderman {
+    top: 20px !important;
+}
+
+/* Larger Image */
+.main-image {
+    width: 50%;  /* Increased size */
+    max-width: 250px; /* Set a max width to prevent stretching */
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+/* Play/Pause Button at Top */
 .music-container {
     position: fixed;
     top: 10px;
@@ -41,72 +62,24 @@ body {
     background-color: #d60000;
 }
 
-/* Login Form */
+/* Login Form Styling */
 #login-container {
     text-align: center;
-    padding: 50px;
     margin-top: 100px;
 }
 
-#login-container input {
+input {
     padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    font-size: 16px;
+    margin: 10px;
 }
 
-#login-container button {
+button {
+    padding: 10px 20px;
+    font-size: 16px;
     background-color: #ff4d6d;
     color: white;
-    padding: 10px 20px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-}
-
-#login-container button:hover {
-    background-color: #d60000;
-}
-
-/* Main Image */
-.main-image {
-    width: 50%;  /* Increased size */
-    max-width: 250px; /* Set a max width to prevent stretching */
-    border-radius: 15px;
-    margin-top: 15px;
-}
-
-/* Spider-Man Pop-Up */
-#spiderman-container {
-    position: fixed;
-    top: -200px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: 0.5s ease-in-out;
-}
-
-#spiderman {
-    width: 150px;
-}
-
-/* Animation */
-.show-spiderman {
-    top: 20px !important;
-}
-
-/* Floating Hearts Animation */
-.hearts {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('heart.png');
-    animation: floatHearts 3s ease-in-out infinite;
-}
-
-@keyframes floatHearts {
-    0% { top: 0; opacity: 1; }
-    50% { top: 50%; opacity: 0.5; }
-    100% { top: 100%; opacity: 0; }
 }
