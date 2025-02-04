@@ -1,36 +1,45 @@
-// Users and Passwords
-const users = {
-    Saddonti: "ana bento la mahmoudi",
-    mahmoudi: "001002003004",
-    Friend: "102030405060708090"
-};
-
-// Handle Login
+// Login Verification
 document.getElementById("login-form").addEventListener("submit", function(event) {
     event.preventDefault();
-
+    
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    // Check if username and password match
+    // Define correct usernames and passwords
+    const users = {
+        "Saddonti": "ana bento la mahmoudi",
+        "mahmoudi": "001002003004",
+        "Friend": "102030405060708090"
+    };
+
+    // Check login credentials
     if (users[username] && users[username] === password) {
-        // Hide login and show content
+        // Hide login form
         document.getElementById("login-container").style.display = "none";
+
+        // Show content and the Spider-Man image
         document.getElementById("content-container").style.display = "block";
+        document.getElementById("spiderman-container").style.display = "block";
+
+        // Spider-Man Effect
+        document.getElementById("spiderman-container").classList.add("show-spiderman");
+        
+        setTimeout(() => {
+            document.getElementById("spiderman-container").style.display = "none";
+        }, 3000);
     } else {
-        alert("Incorrect username or password. Please try again.");
+        alert("Incorrect Username or Password");
     }
 });
 
-// Play/Pause Music Button
+// Music Play/Pause Button
 document.getElementById("toggle-music").addEventListener("click", function() {
     const music = document.getElementById("bg-music");
-
     if (music.paused) {
         music.play();
-        this.textContent = "Pause Music"; // Text changes to 'Pause Music' when playing
+        this.textContent = "Pause Music";
     } else {
         music.pause();
-        this.textContent = "Music Player"; // Text changes back to 'Music Player' when paused
+        this.textContent = "Play Music";
     }
 });
