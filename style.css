@@ -13,12 +13,34 @@ body {
     padding-top: 70px; /* Give space at the top so content is not hidden behind the button */
 }
 
-/* Larger Image */
-.main-image {
-    width: 50%;  /* Increased size */
-    max-width: 250px; /* Set a max width to prevent stretching */
-    border-radius: 15px;
-    margin-top: 15px;
+/* Hide content initially */
+#content-container {
+    display: none;
+}
+
+/* Login Form Container */
+#login-container {
+    display: block;
+}
+
+/* Spider-Man Pop-Up */
+#spiderman-container {
+    position: fixed;
+    top: -200px; /* Start off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s ease-in-out;
+    display: none;  /* Initially hidden */
+    z-index: 9999;  /* Ensure it's on top */
+}
+
+#spiderman {
+    width: 150px;
+}
+
+/* Animation for Spider-Man logo when it's visible */
+.show-spiderman {
+    top: 10px !important;  /* Position at the top */
 }
 
 /* Play/Pause Button at Top */
@@ -41,4 +63,66 @@ body {
 }
 
 #toggle-music:hover {
-    background-color: #
+    background-color: #d60000;
+}
+
+/* Main Image */
+.main-image {
+    width: 50%;  /* Increased size */
+    max-width: 250px; /* Set a max width to prevent stretching */
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+/* Navigation Links */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #d60000;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+/* Fade-In Effect for Content */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hearts Animation */
+.hearts {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: floatHearts 5s ease-in-out infinite;
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-50px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
