@@ -1,9 +1,7 @@
-/* Loved-Themed Pink Background */
+/* Love-Themed Background */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffccdd; /* Soft pink */
-    background-image: url('hearts-background.png'); /* Add a hearts-themed background */
-    background-size: cover;
+    background-color: #ffccdd; /* Pink */
     text-align: center;
     margin: 0;
     padding: 0;
@@ -16,7 +14,7 @@ body {
     top: -200px;
     left: 50%;
     transform: translateX(-50%);
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 #spiderman {
@@ -28,10 +26,26 @@ body {
     top: 20px !important;
 }
 
-/* Smaller Image */
+/* Small Image */
 .main-image {
-    width: 30%; /* Smaller size */
+    width: 40%;
     max-width: 150px;
     border-radius: 15px;
     margin-top: 15px;
+}
+
+/* Play/Pause Button */
+#toggle-music {
+    background-color: #ff4d6d; /* Pinkish-red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#toggle-music:hover {
+    background-color: #d60000;
 }
