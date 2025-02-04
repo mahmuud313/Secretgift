@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Valentine's Day</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
     <!-- Background Music -->
-    <audio id="bg-music" loop>
+    <audio id="bg-music" autoplay loop>
         <source src="song.mp3" type="audio/mpeg">
     </audio>
 
@@ -45,11 +46,15 @@
 
             **أُقسِم بالذي خلقكِ، فسواكِ، فعدّلكِ، أني أعشقكِ بطريقة لا يستوعبها عقلُكِ**<br><br>
 
-            **Mahmoudik ❤️**<br><br>
+            This was written from me to you on Valentine's Day, Saddonti, because I love you so much. **Allah ykhalili eyeke ya noor 3yoone, ya balsam jroohate, ya malja2e, w ya ملاذي الآمن.** Stay with me, love me, and be just like I always tell you. **I promise I will always be with you until the end of time**, until we see our grandchildren playing in front of us ❤️❤️❤️❤️.<br><br>
+
+            **Mahmoudik**<br><br>
+
+            ***أحِبُّكِ هذا مني بيان ولَنْ أُخفيهِ بل إعلان أُحِبُّك يا حبيب الله وأهوى هاتِهِ العينان❤️ الله يخليلي اياكي بحياتي يا حبيبتي بحِبِّك كتييييير ❤️❤️***
         </p>
 
         <!-- Smaller Image -->
-        <img src="GridArt_20250202_101658434.jpg" alt="A lovely image for Saddonti" class="main-image">
+        <img src="image.png" alt="A lovely image for Saddonti" class="main-image">
 
         <!-- Navigation -->
         <nav>
@@ -61,42 +66,6 @@
 
     <!-- Floating Hearts Animation -->
     <div class="hearts"></div>
-
-    <script>
-        // Ensure the music starts after user interaction (fix for autoplay restrictions)
-        document.addEventListener("DOMContentLoaded", function() {
-            const music = document.getElementById("bg-music");
-
-            function playMusic() {
-                music.play().catch(error => console.log("Autoplay blocked, user interaction required."));
-                document.removeEventListener("click", playMusic); // Remove listener after first interaction
-            }
-
-            document.addEventListener("click", playMusic); // Start music on first click anywhere
-        });
-
-        // Music Toggle Button
-        document.getElementById("toggle-music").addEventListener("click", function() {
-            const music = document.getElementById("bg-music");
-            if (music.paused) {
-                music.play();
-                this.textContent = "Pause Music";
-            } else {
-                music.pause();
-                this.textContent = "Play Music";
-            }
-        });
-
-        // Spider-Man Effect
-        window.onload = function() {
-            setTimeout(() => {
-                document.getElementById("spiderman-container").classList.add("show-spiderman");
-                setTimeout(() => {
-                    document.getElementById("spiderman-container").style.display = "none";
-                }, 3000);
-            }, 500);
-        };
-    </script>
 
 </body>
 </html>
