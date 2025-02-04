@@ -61,3 +61,10 @@ body {
 #toggle-music:hover {
     background-color: #d60000;
 }
+
+/* Login Form */
+#login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,
