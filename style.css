@@ -34,7 +34,13 @@ body {
     margin-top: 15px;
 }
 
-/* Play/Pause Button */
+/* Play/Pause Button at Top */
+.music-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
 #toggle-music {
     background-color: #ff4d6d; /* Pinkish-red */
     color: white;
@@ -43,7 +49,6 @@ body {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px;
 }
 
 #toggle-music:hover {
