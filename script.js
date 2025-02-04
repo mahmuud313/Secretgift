@@ -1,14 +1,12 @@
-// Spider-Man Effect
+// Spider-Man Effect - Appears Instantly
 window.onload = function() {
+    document.getElementById("spiderman-container").classList.add("show-spiderman");
     setTimeout(() => {
-        document.getElementById("spiderman-container").classList.add("show-spiderman");
-        setTimeout(() => {
-            document.getElementById("spiderman-container").style.display = "none";
-        }, 3000); // Spider-Man disappears after 3 seconds
-    }, 500); // Wait for 0.5 seconds before showing Spider-Man
+        document.getElementById("spiderman-container").style.display = "none";
+    }, 3000);
 };
 
-// Music Toggle
+// Play/Pause Music Button
 document.getElementById("toggle-music").addEventListener("click", function() {
     const music = document.getElementById("bg-music");
     if (music.paused) {
