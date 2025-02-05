@@ -7,26 +7,28 @@ body {
     color: #d60000;
 }
 
+/* Login Container */
+#login-container {
+    margin-top: 100px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+}
+
+/* Hidden Class */
 .hidden {
     display: none;
 }
 
-.container {
-    padding-top: 50px;
-}
-
-.main-image {
-    width: 50%;
-    max-width: 250px;
-    border-radius: 15px;
-    margin-top: 15px;
-}
-
+/* Music Button */
 .music-container {
     position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 999;
 }
 
 #toggle-music {
@@ -41,4 +43,17 @@ body {
 
 #toggle-music:hover {
     background-color: #d60000;
+}
+
+/* Letter Box */
+.letter-box {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
 }
