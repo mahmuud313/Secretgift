@@ -1,57 +1,74 @@
-/* General Styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffccdd;
+    background: linear-gradient(135deg, #ffcccc, #ff66b2);
     text-align: center;
     margin: 0;
     padding: 0;
     color: #d60000;
+    background-size: cover;
 }
 
-/* Center Login Form */
+/* Hide content until login */
+.hidden {
+    display: none;
+}
+
+/* Login form */
 #login-container {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
-#login-container input, button {
-    margin: 10px;
-    padding: 10px;
-    font-size: 16px;
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ff4d6d;
 }
 
-/* Container for Main Content */
-.container {
-    padding-top: 50px;
+button {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-/* Music Button */
+button:hover {
+    background-color: #d60000;
+}
+
+/* Music button */
 .music-container {
     position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 999;
 }
 
 #toggle-music {
     background-color: #ff4d6d;
     color: white;
-    border: none;
     padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
     border-radius: 5px;
 }
 
-#toggle-music:hover {
-    background-color: #d60000;
+/* Content */
+h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-top: 50px;
 }
 
-/* Small Image at Bottom */
+/* Image */
 .main-image {
     width: 100px;
-    height: 100px;
-    object-fit: cover;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Style for hidden content (message and image) */
+#content {
+    display: none;
+    color: #ffffff;
 }
