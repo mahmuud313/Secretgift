@@ -8,68 +8,64 @@ body {
     color: #d60000; /* Deep red text */
 }
 
-/* Container for the content */
-.container {
-    padding-top: 70px; /* Give space at the top so content is not hidden behind the button */
+/* Hide Content Before Login */
+.hidden {
+    display: none;
 }
 
-/* Larger Image */
-.main-image {
-    width: 50%;  /* Increased size */
-    max-width: 250px; /* Set a max width to prevent stretching */
-    border-radius: 15px;
-    margin-top: 15px;
+/* Login Container */
+#login-container {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    margin: 100px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Play/Pause Button at Top */
+#login-container input {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+#login-container button {
+    background-color: #ff4d6d;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#error-message {
+    color: red;
+}
+
+/* Play/Pause Button */
 .music-container {
     position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 999; /* Ensure button stays on top of other elements */
+    z-index: 999;
 }
 
 #toggle-music {
-    background-color: #ff4d6d; /* Pinkish-red */
+    background-color: #ff4d6d;
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    z-index: 999; /* Ensure button stays visible */
 }
 
 #toggle-music:hover {
     background-color: #d60000;
 }
 
-/* Navigation */
-nav a {
-    color: #d60000;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0 15px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Floating Hearts Animation */
-.hearts {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 30px;
-    color: #ff4d6d;
-    animation: hearts 5s infinite;
-}
-
-/* Hearts Animation */
-@keyframes hearts {
-    0% { opacity: 0; top: 30%; left: 50%; transform: translateX(-50%); }
-    50% { opacity: 1; top: 40%; left: 45%; }
-    100% { opacity: 0; top: 50%; left: 60%; }
+/* Main Image */
+.main-image {
+    width: 50%;
+    max-width: 300px;
+    border-radius: 15px;
+    margin-top: 15px;
 }
