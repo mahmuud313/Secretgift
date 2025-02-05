@@ -63,7 +63,7 @@ h1 {
 
 /* Image */
 .main-image {
-    width: 100px;
+    width: 100px;  /* Set image width to 100px */
     margin-top: 20px;
 }
 
@@ -71,4 +71,20 @@ h1 {
 #content {
     display: none;
     color: #ffffff;
+}
+
+/* Navigation */
+nav {
+    margin-top: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: #ff66b2;
 }
