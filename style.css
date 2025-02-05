@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: #d60000;
+    background-size: cover;
 }
 
 /* Hide content until login */
@@ -62,7 +63,7 @@ h1 {
 
 /* Image */
 .main-image {
-    width: 200px; /* Set image width to 200px */
+    width: 150px;  /* Adjusted image size */
     margin-top: 20px;
 }
 
