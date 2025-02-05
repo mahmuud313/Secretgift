@@ -10,26 +10,18 @@
 <body>
     <!-- Login Form -->
     <div id="login-container">
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Enter Username">
-        <input type="password" id="password" placeholder="Enter Password">
-        <button onclick="checkLogin()">Login</button>
-        <p id="error-message"></p>
+        <h2>Please Log In</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
     </div>
 
-    <!-- Content (Hidden until login) -->
+    <!-- Content (Initially Hidden) -->
     <div id="content" class="hidden">
-        <!-- Music Player -->
-        <div class="music-container">
-            <button id="toggle-music">Music Player</button>
-            <audio id="bg-music" loop>
-                <source src="song.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-
-        <h1>Happy Valentine's Day Habeebte ❤️</h1>
-        <p>
-            **My Saddonti, my love, my everything,**<br><br>
+        <h1>Happy Valentine's Day Habeebte❤️🫂</h1>
+        <p>**My Saddonti, my love, my everything,**<br><br>
             Happy Valentine’s Day, my beautiful girl Saddonti. I don’t even know where to start because no words can truly capture how much you mean to me. From the moment you walked into my life, everything became brighter, warmer, and so much more beautiful. You are the best thing that has ever happened to me, and every single day, I thank the universe for bringing you into my world.<br><br>
             You are not just a normal girl, you're **my girl, my home, my heart, and my safest place.** You're my everything ❤️.<br><br>
             I get lost in your **eyes** every time I look at you—they hold so much love, so much depth, and they pull me in like nothing else ever could. And your **hair**, soft and perfect, is just another thing about you that I can never get enough of. But beyond all that, it’s your **heart, your kindness, and the way you make me feel** that truly makes you the most special person in my life.<br><br>
@@ -44,8 +36,20 @@
             ***أحِبُّكِ هذا مني بيان ولَنْ أُخفيهِ بل إعلان أُحِبُّك يا حبيب الله وأهوى هاتِهِ العينان❤️ الله يخليلي اياكي بحياتي يا حبيبتي بحِبِّك كتييييير ❤️❤️***
         </p>
 
-        <!-- Smaller Image at Bottom -->
+        <!-- Smaller Image -->
         <img src="image.png" alt="A lovely image for Saddonti" class="main-image">
+
+        <!-- Navigation -->
+        <nav>
+            <a href="OurStory.html">Our Story</a>
+            <a href="gallery.html">Photo Gallery</a>
+            <a href="surprise.html">Surprise</a>
+        </nav>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-container">
+        <button id="toggle-music">Music Player</button>
     </div>
 </body>
 </html>
