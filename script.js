@@ -29,3 +29,6 @@ document.getElementById("toggle-music").addEventListener("click", function() {
         this.textContent = "Music Player";  // Change button text to "Music Player"
     }
 });
+
+// Ensure the music doesn't play automatically when the page is loaded
+document.getElementById("bg-music").pause();
