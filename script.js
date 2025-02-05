@@ -1,4 +1,4 @@
-// Login System
+// LOGIN SYSTEM
 function checkLogin() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -11,18 +11,20 @@ function checkLogin() {
 
     if (users[username] && users[username] === password) {
         document.getElementById("login-container").style.display = "none";
-        document.getElementById("main-content").classList.remove("hidden");
+        document.getElementById("content-container").style.display = "block";
     } else {
-        document.getElementById("error-message").textContent = "Invalid username or password.";
+        document.getElementById("login-message").innerText = "Invalid Username or Password";
     }
 }
 
-// Music Player
+// MUSIC PLAYER
 document.getElementById("toggle-music").addEventListener("click", function() {
     const music = document.getElementById("bg-music");
     if (music.paused) {
         music.play();
+        this.textContent = "Pause Music";
     } else {
         music.pause();
+        this.textContent = "Music Player";
     }
 });
