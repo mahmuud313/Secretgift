@@ -1,30 +1,29 @@
-// LOGIN SYSTEM
+// Login System
 function checkLogin() {
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
     const users = {
         "Saddonti": "ana bento la mahmoudi",
         "mahmoudi": "001002003004",
         "Friend": "102030405060708090"
     };
 
-    if (users[username] && users[username] === password) {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let errorMessage = document.getElementById("error-message");
+
+    if (users[username] === password) {
         document.getElementById("login-container").style.display = "none";
-        document.getElementById("content-container").style.display = "block";
+        document.getElementById("content").style.display = "block";
     } else {
-        document.getElementById("login-message").innerText = "Invalid Username or Password";
+        errorMessage.textContent = "Incorrect username or password!";
     }
 }
 
-// MUSIC PLAYER
-document.getElementById("toggle-music").addEventListener("click", function() {
-    const music = document.getElementById("bg-music");
+// Music Player
+document.getElementById("toggle-music").addEventListener("click", function () {
+    let music = document.getElementById("bg-music");
     if (music.paused) {
         music.play();
-        this.textContent = "Pause Music";
     } else {
         music.pause();
-        this.textContent = "Music Player";
     }
 });
