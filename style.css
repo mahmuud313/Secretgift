@@ -13,7 +13,7 @@ body {
     display: none;
 }
 
-/* Login Page */
+/* Login form */
 #login-container {
     margin-top: 50px;
 }
@@ -40,21 +40,7 @@ button:hover {
     background-color: #d60000;
 }
 
-/* Timer Section */
-#timer-container {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-#time-elapsed {
-    font-size: 1.5em;
-    color: #ffffff;
-}
-
-/* Music Player */
+/* Music button */
 .music-container {
     position: fixed;
     top: 10px;
@@ -68,15 +54,21 @@ button:hover {
     border-radius: 5px;
 }
 
-/* Letter Content */
+/* Content */
 h1 {
     color: #ffffff;
     font-size: 2.5em;
     margin-top: 50px;
 }
 
-/* Image (Now Slightly Bigger) */
+/* Image */
 .main-image {
-    width: 180px;
+    width: 150px;  /* Adjusted image size */
     margin-top: 20px;
+}
+
+/* Style for hidden content (message and image) */
+#content {
+    display: none;
+    color: #ffffff;
 }
