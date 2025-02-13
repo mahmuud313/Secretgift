@@ -8,10 +8,12 @@ body {
     background-size: cover;
 }
 
+/* Hide content until login */
 .hidden {
     display: none;
 }
 
+/* Login form */
 #login-container {
     margin-top: 50px;
 }
@@ -34,13 +36,39 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+    background-color: #d60000;
+}
+
+/* Music button */
 .music-container {
     position: fixed;
     top: 10px;
     right: 10px;
 }
 
+#toggle-music {
+    background-color: #ff4d6d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Content */
+h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-top: 50px;
+}
+
+/* Image */
 .main-image {
-    width: 150px;
+    width: 150px;  /* Adjusted image size */
     margin-top: 20px;
+}
+
+/* Style for hidden content (message and image) */
+#content {
+    display: none;
+    color: #ffffff;
 }
