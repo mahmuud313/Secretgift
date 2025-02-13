@@ -8,27 +8,28 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Background Music -->
-    <audio id="bg-music" preload="auto">
-        <source src="song.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
 
-    <!-- Music Button -->
-    <div class="music-container">
-        <button id="toggle-music">Music Player</button>
-    </div>
-
-    <!-- Content -->
+    <!-- Login Page -->
     <div id="login-container">
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Enter username">
-        <input type="password" id="password" placeholder="Enter password">
-        <button onclick="login()">Login</button>
+        <h2>Enter Your Credentials</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="checkLogin()">Login</button>
     </div>
 
+    <!-- First Page (Letter) -->
     <div id="content" class="hidden">
-        <h1>Happy Valentine's Day Habeebte❤️🫂</h1>
+        <!-- Music Player -->
+        <div class="music-container">
+            <button id="toggle-music">Music Player</button>
+            <audio id="bg-music" loop>
+                <source src="song.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <!-- Letter Content -->
+        <div class="container">
+<h1>Happy Valentine's Day Habeebte❤️🫂</h1>
         <p>
             **My Saddonti, my love, my everything,**<br><br>
             Happy Valentine’s Day, my beautiful girl Saddonti. I don’t even know where to start because no words can truly capture how much you mean to me. From the moment you walked into my life, everything became brighter, warmer, and so much more beautiful. You are the best thing that has ever happened to me, and every single day, I thank the universe for bringing you into my world.<br><br>
@@ -45,15 +46,20 @@
             ***أحِبُّكِ هذا مني بيان ولَنْ أُخفيهِ بل إعلان أُحِبُّك يا حبيب الله وأهوى هاتِهِ العينان❤️ الله يخليلي اياكي بحياتي يا حبيبتي بحِبِّك كتييييير ❤️❤️***
         </p>
 
-        <!-- Image -->
-        <img src="image.png" alt="A lovely image for Saddonti" class="main-image">
+            <!-- Image -->
+            <img src="image.png" alt="A lovely image for Saddonti" class="main-image">
+        </div>
 
-        <!-- Navigation -->
-        <nav>
-            <a href="OurStory.html">Our Story</a>
-            <a href="gallery.html">Photo Gallery</a>
-            <a href="surprise.html">Surprise</a>
-        </nav>
+        <!-- Button to Second Page -->
+        <button onclick="showTimerPage()">Next Page</button>
     </div>
+
+    <!-- Second Page (Time Counter) -->
+    <div id="timer-page" class="hidden">
+        <h2>Time Since Our Special Moment</h2>
+        <p id="time-counter"></p>
+        <button onclick="showLetterPage()">Back</button>
+    </div>
+
 </body>
 </html>
